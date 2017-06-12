@@ -26,7 +26,7 @@ brew cask install duet\
 brew cask install evernote\
 brew cask install fantastical\
 brew cask install firefox\
-brew cask install titbit-connect\
+brew cask install fitbit-connect\
 brew cask install gemini\
 brew cask install google-drive\
 brew cask install google-earth\
