@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+            <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+      <meta charset="UTF-8">
+              <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-57x57.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-114x114.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-72x72.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-144x144.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-60x60.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-120x120.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-76x76.png?nc=1" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://img.mfcimg.com/images/favicons/apple-touch-icon-152x152.png?nc=1" />
+<link rel="icon" type="image/png" href="https://img.mfcimg.com/images/favicons/favicon-196x196.png?nc=1" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://img.mfcimg.com/images/favicons/favicon-96x96.png?nc=1" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://img.mfcimg.com/images/favicons/favicon-32x32.png?nc=1" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://img.mfcimg.com/images/favicons/favicon-16x16.png?nc=1" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://img.mfcimg.com/images/favicons/favicon-128.png?nc=1" sizes="128x128" />
+<meta name="application-name" content="MyFreeCams.com Profiles" />
+<meta name="msapplication-TileColor" content="#008000" />
+<meta name="msapplication-TileImage" content="https://img.mfcimg.com/images/favicons/mstile-144x144.png?nc=1" />
+<meta name="msapplication-square70x70logo" content="https://img.mfcimg.com/images/favicons/mstile-70x70.png?nc=1" />
+<meta name="msapplication-square150x150logo" content="https://img.mfcimg.com/images/favicons/mstile-150x150.png?nc=1" />
+<meta name="msapplication-wide310x150logo" content="https://img.mfcimg.com/images/favicons/mstile-310x150.png?nc=1" />
+<meta name="msapplication-square310x310logo" content="https://img.mfcimg.com/images/favicons/mstile-310x310.png?nc=1" />
+
+            <script src="https://img.mfcimg.com/profiles/jquery/jquery-1.9.1.min.js"></script>
+<script src="https://img.mfcimg.com/profiles/jquery/jquery-ui-1.9.2.min.js"></script>
+<script src="https://img.mfcimg.com/profiles/jquery/jquery.ui.touch-punch.min.js"></script>      <script>
+  var g_hPlatform = { "id": 1, "domain": "myfreecams.com", "name": "MyFreeCams", "code": "mfc", "image_url": "https://img.mfcimg.com/" };
+
+      try { document.domain = 'myfreecams.com'; } catch (e) {}
+  
+          var MfcAssets = {
+      images: "/bundles/mfcprofile/vendor/img/",
+      urls: {
+        www: "https://www.myfreecams.com/",
+        new_comments: "/TriciaFox/comments/since/0"
+      }
+    };
+
+    var MfcPageVars = {
+  userId: 20968146,
+  accessLevel: 2,
+  token: "a572YNV_buvrgSo1vDYlhyQovF_AMzjviyXJPL32ddI",
+  profileState: {"number":127,"string":"Offline"},
+  serverTime: {"unixTime":1497284287,"time":"9:18am PDT","dst":1},
+  profileUsername: "TriciaFox",
+  admirers: 6317,
+  username: "heffalump22",
+  userPhotoUrl: "https://img.mfcimg.com/photos2/209/20968146/",
+  vToken: "e801d1819cf9d25720c1263533959268",
+  avatarRev: 1497129185,
+  avgRating: {"rating_count":7355,"rating_average":"4.8937"},
+  rating: 0
+};
+
+  
+  function MfcProfilePage( jQuery )
+  {
+    var _self = this;
+
+    _self.$ = jQuery;
+
+    _self.token = ( typeof(MfcPageVars) !== 'undefined' && MfcPageVars.token ) ? MfcPageVars.token : _self.$('meta[name=token]').attr('content');
+
+    _self.beforeDomReady();
+
+    
+    _self.$(function(){ _self.afterDomReady(); });
+  };
+
+  MfcProfilePage.prototype.beforeDomReady = function()
+  {
+    var _self = this;
+    var $ = _self.$;
+
+    if ( _self.token )
+    {
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+          if ( settings.type === 'GET' || settings.crossDomain )
+            return;
+
+          if ( $.type(settings.data) === 'object' && $.type(settings.data.append) === 'function' )
+          {
+            settings.data.append('_token', _self.token);
+          }
+          else if ( $.type(settings.data) === 'string' && settings.data.indexOf('_token=') === -1 )
+          {
+            if ( settings.data.length === 0 )
+            {
+              xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+            } else {
+              settings.data += '&';
+            }
+
+            settings.data += encodeURIComponent('_token') + '=' + encodeURIComponent(_self.token);
+          }
+        }
+      });
+
+      $(document).on('submit', 'form', function(e)
+      {
+        if ( ! $(this).find('#_token').length && ! $(this).data('mfc-no-token') )
+          $(this).append($('<input type="hidden" name="_token" id="_token" value="' + _self.token + '">'));
+      });
+    }
+  };
+
+  MfcProfilePage.prototype.afterDomReady = function()
+  {
+    var _self = this;
+    var $ = this.$;
+
+    var page = $('body').data('mfc-page');
+
+    if ( $.isFunction(_self[page]) )
+      _self[page]();
+  };
+
+  new MfcProfilePage(jQuery);
+</script>    
+
+  <link href="https://img.mfcimg.com/profiles/prod/css/profiles.css?nc=33135800534464640?nc=33135800534464640" type="text/css" rel="stylesheet">
+
+  <title>TriciaFox's Homepage on MyFreeCams.com</title>
+  <meta name="description" content="TriciaFox's webcam homepage on MyFreeCams.com - your #1 adult webcam community">
+  <meta name="keywords" content="webcams,models,adult,community,nude,chat,video">
+
+  <style type="text/css">
+    body.mfc_display_inline_mode #header_bar, body.mfc_display_inline_mode #footer_bar {
+      visibility: hidden;
+    }
+    body.mfc_profile_standard.mfc_display_inline_mode {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me {
+      display: flex;
+      flex-flow: wrap;
+    }
+    body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me .heading {
+      flex: 0 0 100%;
+    }
+    body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me .container {
+      flex: 0 1 50%;
+      margin: 0;
+      padding: 0;
+    }
+    body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me #about_me_container, body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me #tags_container {
+      flex: 0 0 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    @media (max-width: 850px) {
+      body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me .container {
+        flex: 0 0 100%;
+      }
+    }
+    @media (min-width: 1500px) {
+      body.mfc_profile_standard.mfc_display_inline_mode #profile_about_me .container {
+        flex: 0 0 33%;
+      }
+    }
+  </style>
+  
+          <link href="/TriciaFox/css?nc=1482923586" rel="stylesheet" type="text/css">
+    
+  
+  <script type="text/javascript">
+  g_bInIframe = (function(w) {
+    try {
+      return w.self !== w.top;
+    } catch (e) {
+      return true;
+    }
+    return false;
+  })(window);
+
+  (function(w,d) {
+    'use strict';
+
+    var hrefClickFn = function (e) {
+      e = e || w.event;
+
+      var target = findHrefElFn(e.target || e.srcElement);
+
+      if ( target != undefined && ((target.hostname + target.pathname.replace(/(^\/?)/,'/')).toLowerCase() !== (location.hostname + location.pathname).toLowerCase()) ) {
+        target.setAttribute('target', '_blank');
+        target.setAttribute('rel', 'noopener noreferrer');
+      }
+
+      return true;
+    };
+
+    var isHrefElFn = function(el) {
+      var elName = (el.nodeName || el.tagName).toLowerCase();
+      if ( (elName === 'a' || elName === 'area') && el.href != undefined ) { return true; }
+      return false;
+    };
+
+    var findHrefElFn = function(el) {
+      if ( isHrefElFn(el) ) { return el; }
+      while (el = el.parentNode) {
+        if ( isHrefElFn(el) ) { return el; }
+      }
+      return undefined;
+    };
+
+    if ( g_bInIframe ) {
+      if ( d.addEventListener ) {
+        d.addEventListener('click', hrefClickFn);
+      } else {
+        d.attachEvent('onclick', hrefClickFn);
+      }
+    }
+  })(window, document);
+</script>
+
+  </head>
+  <body class="mfc_profile_customized" data-mfc-page="userShow">
+      <script type="text/javascript">
+  (function(w,d,v) {
+    'use strict';
+
+    var classes = [];
+    var search = w.location.search || '';
+    var vs = (typeof v === 'object' && v.profileState) ? v.profileState.number : 127;
+
+    if ( search.match(/[?&]inline_mode=1/) ) {
+      classes.push('mfc_display_inline_mode');
+    }
+    if ( search.match(/[?&]online=1/) || vs != 127 ) {
+      classes.push('mfc_online');
+    }
+    if ( 'Model' === 'Model' && ( search.match(/[?&]broadcasting=1/) || vs < 90 ) ) {
+      classes.push('mfc_broadcasting');
+    }
+
+    if ( classes.length ) {
+      d.getElementsByTagName('body')[0].className += ' ' + classes.join(' ');
+    }
+
+  })(window, document, MfcPageVars);
+</script>
+  <div id="fixed_background"></div>
+
+  <div id="header_bar">
+    <div class="header_links">
+      <a href="/">Profiles.MyFreeCams.com</a> |
+      <a href='https://www.myfreecams.com/'>MyFreeCams.com</a> |
+      <a href="/_/my_profile">My Profile</a> |
+      <a href="/_/login">Profile Settings</a>
+    </div>
+
+    <div class="clearfix header_time">
+
+      <div id="server_time">
+        <table>
+          <tbody>
+            <tr>
+              <td>Your Time:</td>
+              <td id="your_time"></td>
+            </tr>
+            <tr>
+              <td>MyFreeCams Time:</td>
+              <td id="mfc_time"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="profile">
+    <div class="profile_row">
+      <div class="profile_section" id="profile_header">
+        <div class="profile_section_content">
+          <div class="profile_section_background"></div>
+
+          <div id="avatar_holder">
+                          <img id="profile_avatar" class="img_radius_shadow" src="https://img.mfcimg.com/photos2/147/14755933/avatar.90x90.jpg?nc=1496845113" onError="this.onerror=null; this.src='https://img.mfcimg.com/images/nophoto-f.gif';">
+                      </div>
+
+          <div id="profile_header_container">
+            <div class="heading">
+              TriciaFox
+            </div>
+
+            <div class="container" id="status_container">
+              <div class="label" id="status_label">
+                Status:
+              </div>
+              <div class="value" id="status_value">
+                <span id="member_status_value" class="hidden"></span>
+                <span id="member_type_value">&nbsp;- Model -</span>
+                <span id="member_message_value" class="hidden" data-mfc-member-type="Model"><a href="#" id="show_message_dialog">Send a MyFreeCams Mail</a></span>
+                              </div>
+            </div>
+
+                          
+  
+    <div class="container" id="blurb_container">
+      <span class="label" id="blurb_label">
+        Profile Headline:
+      </span>
+
+              <span class="value" id="blurb_value">
+                      Queen of all you&#039;ve seen
+                  </span>
+          </div>
+
+  
+
+                          
+  
+
+                          
+  
+    <div class="container" id="unix_last_broadcast_container">
+      <span class="label" id="unix_last_broadcast_label">
+        Last Broadcast:
+      </span>
+
+                        <span class="value convert-time" id="unix_last_broadcast_value" data-mfc-unix-time="1497164400" data-mfc-time-format="ddd, MMM D YYYY"></span>
+                  </div>
+
+  
+
+                          
+  
+    <div class="container" id="unix_last_updated_container">
+      <span class="label" id="unix_last_updated_label">
+        Last Updated:
+      </span>
+
+              <span class="value convert-time" id="unix_last_updated_value" data-mfc-unix-time="1497227685" data-mfc-time-format="llll"></span>
+          </div>
+
+  
+
+                      </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile_row" id="profile_main_about_holder">
+
+      
+                        <div class="profile_section" id="profile_about_me_friends">
+    <div class="profile_section_content">
+      <div class="profile_section_background"></div>
+
+      <div class="profile_subsection" id="profile_about_me">
+
+        <div class="heading">
+          About Me
+        </div>
+
+                  
+  
+    <div class="container" id="username_container">
+      <span class="label" id="username_label">
+        Username:
+      </span>
+
+              <span class="value" id="username_value">
+                      TriciaFox                   </span>
+          </div>
+
+  
+
+                  
+  
+    <div class="container" id="cam_score_container">
+      <span class="label" id="cam_score_label">
+        CamScore:
+      </span>
+
+              <span class="value" id="cam_score_value">
+                      18349                   </span>
+          </div>
+
+  
+
+                  
+  
+    <div class="container" id="gender_container">
+      <span class="label" id="gender_label">
+        Gender:
+      </span>
+
+              <span class="value" id="gender_value">
+                      Female                   </span>
+          </div>
+
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+    <div class="container" id="age_container">
+      <span class="label" id="age_label">
+        Age:
+      </span>
+
+              <span class="value" id="age_value">
+                      24                   </span>
+          </div>
+
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+    <div class="container" id="sexual_preference_container">
+      <span class="label" id="sexual_preference_label">
+        Sexual Preference:
+      </span>
+
+              <span class="value" id="sexual_preference_value">
+                      Bisexual                   </span>
+          </div>
+
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+
+                  
+  
+    <div class="container" id="about_me_container">
+      <span class="label" id="about_me_label">
+        About Me:
+      </span>
+
+              <span class="value" id="about_me_value">
+                      <img src="https://img.mfcimg.com/photos2/147/14755933/889-954-226-438-10667264.png" alt="top banner"><br><img src="https://img.mfcimg.com/photos2/147/14755933/606-777-891-770-10678787.png" alt="tip option"><br><img src="https://img.mfcimg.com/photos2/147/14755933/725-366-486-622-10667263.png" alt="monthly top tippers"><br><img src="https://img.mfcimg.com/photos2/147/14755933/480-976-883-286-10667265.png" alt="monthly top tippers part 2"><br><img src="https://img.mfcimg.com/photos2/147/14755933/352-586-100-277-10667266.png" alt="HT all time"><br><img src="https://img.mfcimg.com/photos2/147/14755933/518-209-882-298-10676288.png" alt="custom videos"><br><img src="https://img.mfcimg.com/photos2/147/14755933/746-828-271-881-10676286.png" alt="video banner 1"><br><img src="https://img.mfcimg.com/photos2/147/14755933/684-282-555-351-10676287.png" alt=""><br>                   </span>
+          </div>
+
+  
+
+                  
+  
+    <div class="container" id="tags_container">
+      <span class="label" id="tags_label">
+        Tags:
+      </span>
+
+              <span class="value" id="tags_value">
+                      slim, fit, smile, petite, sensual, heels, brunette, big tits, shaved, hot, sweet, young, legs, tease, ass, booty, pretty eyes                   </span>
+          </div>
+
+  
+
+              </div>
+
+      <div class="profile_subsection" id="profile_friends">
+
+        <div class="heading">
+          Friends
+        </div>
+
+        <div class="container" id="average_rating_container">
+          <span class="label" id="average_rating_label">
+            Average Rating:
+          </span>
+          <span class="value" id="average_rating_value">
+            <span id="average_rating"></span>
+            <span id="average_rating_count"></span>
+          </span>
+        </div>
+
+        <div class="container" id="rate_container">
+          <span class="label" id="rate_label">
+            Rate TriciaFox:
+          </span>
+          <span class="value" id="rate_value">
+            <form id="new_rating" class="hidden" action="/TriciaFox/ratings" method="post">
+  <span id="rating_value_bar"></span>
+  <span id="rating_confirm" class="hidden emphasis notice"></span>
+</form>
+<div id="new_rating_login_message" class="hidden">
+  You must <a href="/_/login">login</a> to rate.
+</div>          </span>
+        </div>
+
+        <div class="container" id="admirers_container">
+          <span class="label" id="admirers_label">
+            Admirers:
+            <br>
+            <form id="new_admirer" action="/TriciaFox/admirers" method="post">
+  
+  (<a href='#' id="admire">admire</a><span id="admire_confirm" class="hidden notice">admired!</span>)
+</form>          </span>
+          <span class="value" id="admirers_value"></span>
+        </div>
+
+        <div class="container" id="friends_container">
+          <span class="label" id="friends_label">
+            Profile Friends:
+            <br>
+            <form id="new_homepage_friend" action="/TriciaFox/homepage_friends" method="post">
+  
+  (<a href='#' id='make_friend'>make friend</a><span id="make_friend_confirm" class="hidden notice">added!</span>)
+</form>          </span>
+          <span class="value" id="friends_value">
+                          <a href="/TriciasHelper">TriciasHelper</a>
+                          <a href="/FAUXMA">FAUXMA</a>
+                          <a href="/PimpdaddyFoxx">PimpdaddyFoxx</a>
+                          <a href="/SucumDemon">SucumDemon</a>
+                      </span>
+        </div>
+
+        <div class="container" id="favorite_models_container">
+          <span class="label" id="favorite_models_label">
+            Favorite Models:
+          </span>
+          <span class="value" id="favorite_models_value">
+                          (this person has no favorite models yet)
+                      </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+              
+  </div>
+
+  <div id="footer_bar">
+    <div class="footer_links">
+      <a href="/">Profiles.MyFreeCams.com</a> |
+      <a href='https://www.myfreecams.com/'>MyFreeCams.com</a> |
+      <a href="/_/my_profile">My Profile</a> |
+      <a href="/_/login">Profile Settings</a>
+    </div>
+  </div>
+
+  <div id="gallery_password_container" style="display: none !important;">
+    <div id="gallery_password_form_modal">
+      <div id="protected_gallery_name"></div>
+      <div id="protected_gallery_instructions">
+        You must specify the password to view this gallery
+      </div>
+      <form id="gallery_password_form" method=post data-mfc-no-token="1password_protected_gallery">
+        <label for="gallery_password">Password:</label>
+        <input type="password" name="gallery_password" id="gallery_password">
+        <input type="submit" name="submit" value="submit" data-mfc-submitted="verifying...">
+      </form>
+      <div id="gallery_password_form_error"></div>
+    </div>
+  </div>
+  <div id="send_message_container" style="display: none !important;">
+    <div id="send_message_form_modal">
+      <h3>Send MFC Mail to TriciaFox</h3>
+      <div id="send_message_form_error"></div>
+      <div id="send_message_form_success" class="hidden">Your message has been delivered!</div>
+    </div>
+  </div>
+      <script src="https://www.myfreecams.com/js/MfcBrokenImageDetector.js" ></script>
+  <script>
+    var mfcImageValidator = new MfcBrokenImageDetector({
+       nProfileUserId: 14755933,
+       nUserId: MfcPageVars.userId,
+       sImgSelector: '.wall_post_body img',
+       sImgParentSelector: '.wall_post_body',
+       sToken: MfcPageVars.vToken
+    });
+
+    mfcImageValidator.checkImages();
+  </script>
+        <script src="https://img.mfcimg.com/profiles/prod/js/profiles.js?nc=33135800534464640?nc=33135800534464640"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-295864-5']);
+  _gaq.push(['_setDomainName', 'myfreecams.com']);
+   _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  </body>
+</html>
